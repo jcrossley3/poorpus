@@ -13,7 +13,8 @@
 (def
   ^{:doc (str "Twitter creds format=" twitter-creds-format)
     :private true}
-  twitter-creds (if-let [creds (io/resource "twitter-creds")]
+  twitter-creds (if-let [creds (or (io/resource "twitter-creds")
+                                   (io/file "/tmp/twitter-creds"))]
                   (apply oauth/make-oauth-creds (read-string (slurp creds)))
                   (throw (Exception. (str "Missing 'twitter-creds' resource. "
                                           "Required format, including square brackets: "
