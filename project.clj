@@ -1,4 +1,4 @@
-(defproject org.clojars.jcrossley3/poorpus "0.1.1-SNAPSHOT"
+(defproject org.clojars.jcrossley3/poorpus "0.1.1"
   :description "Encapsulates clj-http/twitter-api for Poorsmatic"
   :url "https://github.com/jcrossley3/poorpus"
   :license {:name "Eclipse Public License"
